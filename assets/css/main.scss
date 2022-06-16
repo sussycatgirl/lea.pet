@@ -1,0 +1,60 @@
+@import "vars";
+@import "fonts";
+@import "navbar";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-background;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: justify;
+    padding: 0 16px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+span, p, h1, h2, h3, h4, h5, h6 {
+    color: $primary-foreground;
+    font-family: $text-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0 5px 0;
+}
+
+a {
+    color: $color-link;
+    font-family: $text-font;
+    text-decoration: none;
+    transition: filter .3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+mark {
+    background-color: unset;
+    color: $color-mark;
+    text-shadow: 0 0 2px $color-mark;
+}
+
+.article-card {
+    margin-top: 20px;
+}

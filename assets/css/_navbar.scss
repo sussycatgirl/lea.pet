@@ -1,0 +1,27 @@
+@import "vars";
+
+.navbar {
+    height: 40px;
+    background-color: $secondary-background;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.navbar span {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.navbar .links {
+    align-content: flex-end;
+    display: flex;
+    padding-top: 2px;
+}
+
+.navbar .links a {
+    margin-left: 8px;
+    color: #8884ff;
+}

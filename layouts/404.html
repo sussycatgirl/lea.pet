@@ -1,0 +1,20 @@
+{{ define "head" }}
+    <meta property="robots" content="noindex">
+{{ end }}
+
+{{ define "main" }}
+    <main>
+        <h2>Aw balls!</h2>
+        <span>The requested page could not be found. <a id="go-back" href="/">Go back</a></span>
+    </main>
+
+    <script>
+        // If the browser supports js, navigate to the previous page instead of home
+        const link = document.getElementById('go-back');
+        link.attributes.removeNamedItem('href');
+        link.onclick = e => {
+            e.preventDefault();
+            history.back();
+        }
+    </script>
+{{ end }}

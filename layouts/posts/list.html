@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main>
+    <h1>Posts</h1>
+
+    {{ range .Pages }}
+        <article class="article-card">
+            <header>
+                <span>{{ .PublishDate.Format "2" | humanize }} {{ .PublishDate.Format "January, 2006" }}</span>
+                {{ if .Draft }}
+                    <span> · Draft</span>
+                {{ end }}
+                <a href="{{ .RelPermalink }}" style="text-decoration: none;"><h3>{{ .Title }}</h3></a>
+            </header>
+
+            <div>
+                <p>{{ .Summary }}</p>
+            </div>
+        </article>
+    {{ end }}
+</main>
+{{ end }}
