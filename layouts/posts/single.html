@@ -1,8 +1,21 @@
+{{ define "head" }}
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ .Summary }}" />
+    <meta property="og:url" content="{{ .RelPermalink }}" />
+{{ end }}
+
 {{ define "main" }}
     <main>
         <header>
             <h1>{{ .Title }}</h1>
+            <h4>
+                {{ .PublishDate.Format "2" | humanize }} {{ .PublishDate.Format "January, 2006" }} ·
+                {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }}
+                {{ if .Draft }}· Draft{{ end }}
+            </h4>
         </header>
+
+        <hr />
 
         {{ .Content }}
     </main>

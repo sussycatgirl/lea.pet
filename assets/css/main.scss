@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "navbar";
+@import "animations";
 
 * {
     box-sizing: border-box;
@@ -13,13 +14,17 @@ body {
 }
 
 main {
-    max-width: 800px;
+    max-width: $content-width;
     width: 100%;
     display: flex;
     justify-content: left;
     flex-direction: column;
     text-align: justify;
     padding: 0 16px;
+}
+
+main p {
+    line-height: 20px;
 }
 
 .main-container {
@@ -34,6 +39,11 @@ span, p, h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 10px 0 5px 0;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 14px;
 }
 
 a {
@@ -53,6 +63,11 @@ mark {
     background-color: unset;
     color: $color-mark;
     text-shadow: 0 0 2px $color-mark;
+}
+
+hr {
+    width: 100%;
+    animation: hr_appear 0.8s cubic-bezier(.17,.84,.44,1);
 }
 
 .article-card {

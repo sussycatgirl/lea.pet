@@ -2,9 +2,8 @@
 <html lang="{{ .Language.Lang }}">
     <head>
         <meta property="og:type" content="website" />
-        {{- block "head" . }}
-            <meta property="og:type" content="website">
-        {{ end -}}
+        <meta name="theme-color" content="#8260E0" />
+        {{- block "head" . }}{{ end -}}
 
         {{ $mainCss := resources.Get "css/main.scss" | resources.ToCSS | resources.Fingerprint }}
         <link

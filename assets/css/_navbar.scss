@@ -5,8 +5,17 @@
     background-color: $secondary-background;
     padding: 8px 12px;
     display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.navbar-inner {
+    max-width: $content-width;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     user-select: none;
+    padding: 0 16px;
 }
 
 .navbar span {

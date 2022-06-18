@@ -3,9 +3,14 @@
     <h1>Posts</h1>
 
     {{ range .Pages }}
+        <hr />
+
         <article class="article-card">
             <header>
-                <span>{{ .PublishDate.Format "2" | humanize }} {{ .PublishDate.Format "January, 2006" }}</span>
+                <span>
+                    {{ .PublishDate.Format "2" | humanize }} {{ .PublishDate.Format "January, 2006" }} ·
+                    {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }}
+                </span>
                 {{ if .Draft }}
                     <span> · Draft</span>
                 {{ end }}
@@ -13,7 +18,7 @@
             </header>
 
             <div>
-                <p>{{ .Summary }}</p>
+                <p>{{ .Summary }} <a href="{{ .RelPermalink }}">Read more &rsaquo;</a></p>
             </div>
         </article>
     {{ end }}
