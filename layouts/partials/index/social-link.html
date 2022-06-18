@@ -1,0 +1,22 @@
+{{ $style := safeCSS (printf "style='animation-delay: %s00ms;'" .delay) | safeHTMLAttr }}
+<div class="greeting-socials-container" {{ $style }}>
+    <div class="greeting-socials-image-container">
+        {{/* Todo: Figure out how to make this image not appear in w3m */}}
+        <img class="greeting-socials-image" src="{{ .image_url }}" alt="{{ .alt }}" />
+    </div>
+    {{ if .obscured }}
+        {{ $id := md5 .content }}
+        <a
+        href="{{ .href }}"
+        target="_blank"
+        class="greeting-socials-text"
+        id="social_{{ $id }}">Email redacted</a>
+        <script>
+            const elem = document.getElementById("social_{{ $id }}");
+            elem.innerText = atob('pleasedontscrapeme_{{ base64Encode .content }}'.substring(19));
+            elem.setAttribute('href', atob('pleasedontscrapeme_{{ base64Encode .href }}'.substring(19)));
+        </script>
+    {{ else }}
+        <a href="{{ .href }}" target="_blank" class="greeting-socials-text">{{ .content }}</a>
+    {{ end }}
+</div>

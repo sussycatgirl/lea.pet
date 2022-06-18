@@ -4,17 +4,12 @@
 
 {{ define "main" }}
     <main>
-        <h2>Aw balls!</h2>
-        <span>The requested page could not be found. <a id="go-back" href="/">Go back</a></span>
+        <div class="container-404">
+            <h1>Aw balls!</h1>
+            <span class="bg-text-404">404</span>
+            <span style="display: none;">-</span>   <!-- For accessibility - Terminal browsers and screen readers -->
+                                                    <!-- don't know about the special styling on the 404 span above -->
+            <span>The requested page could not be found. <a id="go-back" onclick="history.back();" href="/">Go back</a></span>
+        </div>
     </main>
-
-    <script>
-        // If the browser supports js, navigate to the previous page instead of home
-        const link = document.getElementById('go-back');
-        link.attributes.removeNamedItem('href');
-        link.onclick = e => {
-            e.preventDefault();
-            history.back();
-        }
-    </script>
 {{ end }}

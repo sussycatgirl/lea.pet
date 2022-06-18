@@ -1,7 +1,7 @@
 ---
 title: "Why you should dip your balls in nitric acid instead of sulfuric acid"
 date: 2022-06-14T21:38:02+02:00
-draft: true
+draft: false
 ---
 
 Exercitation Lorem proident in excepteur aliquip sint dolore laborum nostrud anim officia veniam fugiat. Ullamco nostrud sit minim id veniam nisi. Ut fugiat enim deserunt eu adipisicing aliquip aute laborum officia id exercitation ea labore. Sit id pariatur duis sint tempor reprehenderit.

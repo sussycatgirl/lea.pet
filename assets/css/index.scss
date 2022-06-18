@@ -1,0 +1,116 @@
+@import "vars";
+
+@keyframes social-entry-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes welcome-text-shadow-pulse {
+    $color: #ffffff88;
+
+    0% {
+        text-shadow: 0 0 0px $color;
+    }
+
+    50% {
+        text-shadow: 0 0 15px $color;
+    }
+
+    100% {
+        text-shadow: 0 0 0px $color;
+    }
+}
+
+.greeting-area {
+    width: 100%;
+    height: calc(100vh - 48px); // 40px navbar height + 8px padding
+}
+
+.greeting-flex-container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    top: calc(50% - 2vw);
+    transform: translateY(-50%);
+}
+
+.greeting-welcome {
+    max-width: 200px;
+    justify-content: center;
+}
+
+.greeting-welcome span {
+    font-size: 50px;
+    break-after: always;
+    font-family: "Quicksand", sans-serif;
+}
+
+.greeting-welcome .main-text {
+    font-weight: 100;
+}
+
+.greeting-welcome .sub-text {
+    font-weight: 300;
+}
+
+.greeting-welcome .main-text, .greeting-welcome .sub-text {
+    animation: welcome-text-shadow-pulse 15s infinite;
+    animation-delay: 5s;
+}
+
+.greeting-socials {
+    max-width: 300px;
+    justify-content: center;
+}
+
+.greeting-socials-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    min-width: 250px;
+    opacity: 0;
+    animation: social-entry-fade-in .5s;
+    animation-fill-mode: forwards;
+}
+
+.greeting-socials-container.hidden {
+    opacity: 0;
+}
+
+.greeting-socials-image-container {
+    width: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-socials-image {
+    height: 24px;
+    padding-right: 12px;
+}
+
+.greeting-socials-text {
+    font-size: 20px;
+    transition: color .2s;
+    font-family: "Quicksand", sans-serif;
+    color: #dddddd;
+}
+
+.greeting-socials-text:hover {
+    text-decoration: underline;
+    color: #dddddd;
+}
+
+@media (max-width: 800px) {
+    .greeting-flex-container {
+        display: unset;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20vw;
+    }
+
+    .greeting-flex-container .greeting-socials {
+        margin-top: 13vw;
+    }
+}

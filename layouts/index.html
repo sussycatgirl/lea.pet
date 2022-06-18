@@ -1,11 +1,31 @@
+{{ define "head" }}
+{{ $css := resources.Get "css/index.scss" | resources.ToCSS | resources.Fingerprint }}
+<link
+    rel="stylesheet"
+    type="text/css"
+    href='{{ $css.RelPermalink }}'
+/>
+{{ end }}
+
 {{ define "main" }}
-<main style="margin-top: 15vh;">
-    <header>
-        <h1>Hi. I'm Jan.</h1>
-    </header>
-    <p>
-        <mark>Exercitation</mark> non sit do nulla reprehenderit tempor mollit irure esse. Labore ut Lorem cupidatat consequat incididunt non esse ex dolore deserunt nisi commodo consectetur. Eu officia ad proident sint. Nostrud ea velit officia eu aliqua aute cupidatat qui ipsum enim. Voluptate esse qui culpa do velit nulla deserunt Lorem duis est. Et ad proident excepteur velit adipisicing qui velit ullamco consectetur.
-        Lorem ex nostrud Lorem eu adipisicing reprehenderit irure occaecat dolor occaecat quis aliquip magna. Qui id ullamco nostrud deserunt aute. Laboris est dolor cillum cupidatat elit. Irure cillum eu labore non exercitation esse do. Quis aute ea anim culpa enim nostrud deserunt sint amet aliquip ad qui.
-    </p>
+<main>
+    <br style="display: none;" /> <!-- Specifically for readability with terminal browsers -->
+    <div class="greeting-area">
+        <div class="greeting-flex-container">
+            <div class="greeting-welcome">
+                <span class="main-text">Hi.</span>
+                <br />
+                <span class="sub-text">I'm Jan.</span>
+            </div>
+
+            <div class="greeting-socials">
+                {{ partial "index/social-link.html" (dict "delay" "1" "alt" "Revolt" "image_url" "/svg/revolt.svg" "href" "https://rvlt.gg/jan" "content" "@jan") }}
+                {{ partial "index/social-link.html" (dict "delay" "2" "alt" "Discord" "image_url" "/svg/discord.svg" "href" "https://discord.com/invite/4pZgvqgYJ8" "content" "Jаn#2756") }}
+                {{ partial "index/social-link.html" (dict "delay" "3" "alt" "GitHub" "image_url" "/svg/github.svg" "href" "https://github.com/janderedev" "content" "JandereDev") }}
+                {{ partial "index/social-link.html" (dict "delay" "4" "alt" "Misskey" "image_url" "/svg/misskey.svg" "href" "https://miruku.cafe/@jan" "content" "@jan@miruku.cafe") }}
+                {{ partial "index/social-link.html" (dict "delay" "5" "alt" "Email" "image_url" "/svg/email.svg" "href" "mailto:me@janderedev.xyz" "content" "me@janderedev.xyz" "obscured" "true") }}
+            </div>
+        </div>
+    </div>
 </main>
 {{ end }}

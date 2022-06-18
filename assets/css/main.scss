@@ -2,6 +2,7 @@
 @import "fonts";
 @import "navbar";
 @import "animations";
+@import "404";
 
 * {
     box-sizing: border-box;
@@ -19,12 +20,12 @@ main {
     display: flex;
     justify-content: left;
     flex-direction: column;
-    text-align: justify;
     padding: 0 16px;
 }
 
 main p {
     line-height: 20px;
+    text-align: justify;
 }
 
 .main-container {
