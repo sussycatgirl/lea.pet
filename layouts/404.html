@@ -12,4 +12,8 @@
             <span>The requested page could not be found. <a id="go-back" onclick="history.back();" href="/">Go back</a></span>
         </div>
     </main>
+
+    {{- if $plausible := .Site.Params.plausible }}
+        <script>plausible("404",{ props: { path: document.location.pathname } });</script>
+    {{ end }}
 {{ end }}
