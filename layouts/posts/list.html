@@ -1,3 +1,15 @@
+{{ define "head" }}
+{{ $postCount := len .Pages }}
+{{ $readingTime := 0 }}
+{{ range .Pages }} {{ $readingTime = add $readingTime .ReadingTime }} {{ end }}
+<meta property="og:title" content="Posts - janderedev.xyz" />
+<meta
+    property="og:description"
+    content="{{ $postCount }} post{{ if ne $postCount 1 }}s{{ end }} with a total reading time of {{ $readingTime }} minute{{ if ne $readingTime 1 }}s{{ end }}"
+/>
+<meta property="og:url" content="{{ .RelPermalink }}" />
+{{ end }}
+
 {{ define "main" }}
 <main>
     <h1>Posts</h1>
