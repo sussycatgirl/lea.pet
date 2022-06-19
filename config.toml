@@ -1,3 +1,8 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'gbhsrnfdjgkltdhgfhjui'
+
+[params.plausible]
+  domain = "janderedev.xyz"
+  script = "https://stats.fatalerrorcoded.eu/js/stats.js"
+  api = "https://stats.fatalerrorcoded.eu/api/stats"

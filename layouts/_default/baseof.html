@@ -12,6 +12,16 @@
             type="text/css"
             href="{{ $mainCss.RelPermalink }}"
         />
+
+        {{- if $plausible := .Site.Params.plausible.domain }}
+            {{- $plausibleSrc := "https://plausible.io/js/script.js" -}}
+            {{- if .Site.Params.plausible.script -}}
+                {{- $plausibleSrc = .Site.Params.plausible.script -}}
+            {{- end -}}
+
+            <script defer {{ with .Site.Params.plausible.api -}} data-api="{{ . }}" {{- end }} data-domain="{{ $plausible }}" src="{{ $plausibleSrc }}"></script>
+            <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+        {{ end -}}
     </head>
     <body>
         {{ partial "navbar" . }}
