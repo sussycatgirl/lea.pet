@@ -1,0 +1,165 @@
+---
+title: "Donations"
+---
+
+<style>
+    .crypto-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .crypto-container-outer {
+        margin-bottom: 20px;
+    }
+    
+    .currency-img {
+        transition: transform .2s;
+        height: 32px;
+    }
+    
+    .currency-img:hover {
+        transform: scale(1.1);
+    }
+    
+    .crypto-container code, .crypto-address {
+        font-size: 16px;
+        color: #dddddd;
+    }
+    
+    .crypto-address-part {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    
+    .crypto-address ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .crypto-address ::-webkit-scrollbar-thumb {
+        background: rgba(90, 90, 90);
+        border-radius: 5px;
+    }
+      
+    .crypto-address ::-webkit-scrollbar-track {
+        background: var(--primary-bg);
+    }
+    
+    .crypto-container code {
+        font-size: 24px;
+        transform: translateY(-2px);
+        padding-left: 8px;
+    }
+
+    .crypto-address-collapsed:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    .copy-button {
+        top: 2px;
+        position: relative;
+        padding-left: 8px;
+        height: 22px;
+        opacity: .7;
+        transition: opacity .1s, transform .1s;
+    }
+    
+    .copy-button-effects:hover {
+        opacity: .9;
+        transform: scale(1.05);
+    }
+    
+    .copy-button-effects:active {
+        transform: scale(1.15);
+    }    
+</style>
+
+<script>
+    const addresses = {
+        "monero": "87eQbhUqmtF3mZxXvNG6h5d8zognD1NMoFCUZndXyfzABh8UsKv5ikC4H5EMgDrYA7hK2SH1Sugw9PyGGg3fzjB4Sh5KBFJ",
+        "bitcoin": "bc1qreryh89wnx3d5af9s5w48jvv8eazx4cuyqqrwa",
+    }
+
+    function reveal(currency) {
+        const text = document.getElementById(currency + '_text');
+        text.innerText = addresses[currency];
+        text.className = 'crypto-address';
+        text.onclick = undefined;
+    }
+
+    function copy(currency) {
+        const button = document.getElementById(currency + '_button');
+        if (!button.className.includes('copy-button-effects')) return;
+
+        navigator.clipboard.writeText(addresses[currency]);
+        button.className = 'copy-button';
+        button.setAttribute('src', '/svg/check-bold.svg');
+
+        setTimeout(() => {
+            button.className = 'copy-button copy-button-effects';
+            button.setAttribute('src', '/svg/copy.svg');
+        }, 500);
+    }
+</script>
+
+<p>
+    To be clear - I don't expect anyone to give their hard earned money to me.
+    However, if you do want to donate some, be it because you want to support
+    one of my projects or just because you're a cool person, I can only accept
+    crypto for legal and privacy reasons.
+</p>
+
+<h3>Thank you!</h3>
+
+<p>
+    If your XMR or BTC wallet supports OpenAlias, you can
+    put <code>janderedev.xyz</code> instead of copying the address.
+</p>
+
+<noscript>
+    <div class="noscript-container">
+        <h3>Monero</h3>
+        <span><code>87eQbhUqmtF3mZxXvNG6h5d8zognD1NMoFCUZndXyfzABh8UsKv5ikC4H5EMgDrYA7hK2SH1Sugw9PyGGg3fzjB4Sh5KBFJ</code></span>
+        <h3>BTC</h3>
+        <span><code>bc1qreryh89wnx3d5af9s5w48jvv8eazx4cuyqqrwa</code></span>
+    </div>
+</noscript>
+
+<div id="script-only" style="display: none;">
+    <!-- Monero -->
+    <div class="crypto-container-outer">
+        <div class="crypto-container">
+            <div style="width: 32px; justify-content: center; display: flex">
+                <img class="currency-img" src="/images/monero.png" />
+              </div>
+              <span><code>Monero</code></span>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: left;">
+            <div class="crypto-address-part">
+                <code class="crypto-address crypto-address-collapsed" onclick="reveal('monero')" id="monero_text">87eQbhUq..4Sh5KBFJ</code>
+            </div>
+            <img class="copy-button copy-button-effects" src="/svg/copy.svg" onclick="copy('monero')" id="monero_button" />
+        </div>
+    </div>
+
+    <!-- BTC -->
+    <div class="crypto-container-outer">
+        <div class="crypto-container">
+            <div style="width: 32px; justify-content: center; display: flex">
+                <img class="currency-img" src="/images/bitcoin.png" />
+              </div>
+              <span><code>Bitcoin</code></span>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: left;">
+            <div class="crypto-address-part">
+                <code class="crypto-address crypto-address-collapsed" onclick="reveal('bitcoin')" id="bitcoin_text">bc1qrery..cuyqqrwa</code>
+            </div>
+            <img class="copy-button copy-button-effects" src="/svg/copy.svg" onclick="copy('bitcoin')" id="bitcoin_button" />
+        </div>
+    </div>
+</div>
+
+<script>document.getElementById('script-only').style.display = 'unset';</script>
