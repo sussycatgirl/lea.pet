@@ -55,6 +55,7 @@
 
 .greeting-welcome .main-text, .greeting-welcome .sub-text {
     animation: welcome-text-shadow-pulse 15s infinite;
+    animation-fill-mode: backwards;
     animation-delay: 5s;
 }
 
