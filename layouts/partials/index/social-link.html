@@ -7,7 +7,6 @@
     {{ if .obscured }}
         {{ $id := md5 .content }}
         <a
-        href="{{ .href }}"
         target="_blank"
         class="greeting-socials-text"
         id="social_{{ $id }}">Email redacted</a>
