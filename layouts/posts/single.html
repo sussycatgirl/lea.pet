@@ -13,7 +13,7 @@
                 {{ $editDate := printf "%s %s" (.Lastmod.Format "2" | humanize) (.Lastmod.Format "January, 2006") }}
                 {{ $publishDate }} ·
                 {{ if ne $publishDate $editDate }}
-                    Edited {{ $editDate }} ·
+                    edited {{ $editDate }} ·
                 {{ end }}
                 {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }} ·
                 <a href="https://github.com/janderedev/janderedev.xyz/commits/master/content/{{ .File.Path }}" target="_blank">History</a>
