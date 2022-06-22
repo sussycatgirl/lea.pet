@@ -20,7 +20,7 @@
         <article class="article-card">
             <header>
                 <span>
-                    {{ .PublishDate.Format "2" | humanize }} {{ .PublishDate.Format "January, 2006" }} ·
+                    {{ .PublishDate.Format "January 2, 2006" }} ·
                     {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }}
                 </span>
                 {{ if .Draft }}
