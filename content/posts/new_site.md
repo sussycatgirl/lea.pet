@@ -13,7 +13,7 @@ You can view that site [here](https://janderedev-xyz-old.vercel.app) if you wish
 This new version was made using [Hugo](https://gohugo.io), and the source code is [available on GitHub](https://github.com/janderedev/janderedev.xyz).
 It finally features a proper blog and works without JavaScript. I tried to make it compatible with terminal browsers as well, but gave up on that after a while.
 
-Huge thanks to [FatalErrorCoded](https://fatalerrorcoded.eu) - I basically stole parts of the design from there.
+Huge thanks to [FatalErrorCoded](https://fatalerrorcoded.eu) for letting me "reuse" his code as well as providing me with a Plausible instance.
 
 ## Markdown demonstration
 Also stolen from Fatal :)
