@@ -1,6 +1,8 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://janderedev.xyz/'
 languageCode = 'en-us'
-title = 'gbhsrnfdjgkltdhgfhjui'
+title = 'janderedev.xyz'
+enableGitInfo = true
+disableKinds = [ "taxonomy", "term", "RSS" ]
 
 [params.plausible]
   domain = "janderedev.xyz"

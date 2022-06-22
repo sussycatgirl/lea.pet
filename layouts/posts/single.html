@@ -9,9 +9,14 @@
         <header>
             <h1>{{ .Title }}</h1>
             <h4>
-                {{ .PublishDate.Format "2" | humanize }} {{ .PublishDate.Format "January, 2006" }} ·
-                {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }}
-                {{ if .Draft }}· Draft{{ end }}
+                {{ $publishDate := printf "%s %s" (.PublishDate.Format "2" | humanize) (.PublishDate.Format "January, 2006") }}
+                {{ $editDate := printf "%s %s" (.Lastmod.Format "2" | humanize) (.Lastmod.Format "January, 2006") }}
+                {{ $publishDate }} ·
+                {{ if ne $publishDate $editDate }}
+                    Edited {{ $editDate }} ·
+                {{ end }}
+                {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }} ·
+                <a href="https://github.com/janderedev/janderedev.xyz/commits/master/content/{{ .File.Path }}" target="_blank">History</a>
             </h4>
         </header>
 
