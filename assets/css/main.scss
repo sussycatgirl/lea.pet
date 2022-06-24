@@ -48,17 +48,22 @@ h4 {
     font-size: 14px;
 }
 
-a {
+a:not(.no-link-styling) {
     color: $color-link;
     font-family: $text-font;
     text-decoration: none;
     transition: filter .3s;
 }
 
-a:hover {
+a:not(.no-link-styling):hover {
     text-decoration: underline;
     cursor: pointer;
     filter: brightness(1.2);
+}
+
+.no-link-styling {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 mark {

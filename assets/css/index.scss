@@ -95,13 +95,12 @@
 .greeting-socials-text {
     font-size: 20px;
     transition: color .2s;
-    font-family: "Quicksand", sans-serif;
-    color: #dddddd;
+    font-family: "Quicksand", sans-serif !important;
+    color: #dddddd !important;
 }
 
 .greeting-socials-text:hover {
     text-decoration: underline;
-    color: #dddddd;
 }
 
 @media (max-width: 800px) {

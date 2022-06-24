@@ -1,6 +1,21 @@
 @import "vars";
 @import "nord";
 
+.article {
+    h1, h2, h3, h4, h5, h6 {
+        user-select: none;
+        cursor: pointer;
+
+        text-decoration: underline;
+        text-decoration-color: rgba($primary-foreground, 0);
+        transition: text-decoration-color .3s;
+
+        &:hover {
+            text-decoration-color: rgba($primary-foreground, .7);
+        }
+    }
+}
+
 ul, ol {
     font-family: $text-font;
     color: $primary-foreground;
