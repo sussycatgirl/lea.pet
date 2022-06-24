@@ -1,6 +1,20 @@
 @import "vars";
 @import "nord";
 
+ul, ol {
+    font-family: $text-font;
+    color: $primary-foreground;
+}
+
+li {
+    padding: 2px 0;
+    transition: transform .2s ease-in-out;
+}
+
+li:hover {
+    transform: translateX(2px);
+}
+
 code:not(.no-codeblock) {
     background-color: $secondary-background;
     padding: 1px 3px;
