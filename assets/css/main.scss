@@ -3,6 +3,7 @@
 @import "navbar";
 @import "animations";
 @import "404";
+@import "markdown";
 
 * {
     box-sizing: border-box;
@@ -33,7 +34,7 @@ main p {
     justify-content: center;
 }
 
-span, p, h1, h2, h3, h4, h5, h6 {
+.text, p, h1, h2, h3, h4, h5, h6 {
     color: $primary-foreground;
     font-family: $text-font;
 }

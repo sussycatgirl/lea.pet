@@ -1,0 +1,23 @@
+{{ $lang  := .Attributes.lang  | default .Type }}
+<div class="codeblock-outer" id="codeblock_{{ .Ordinal }}">
+    <img
+        src="/svg/copy.svg"
+        class="codeblock-copy"
+        id="codeblock_copy_{{ .Ordinal }}"
+        onclick="var range = document.createRange();
+                 range.selectNode(document.getElementById('codeblock_{{ .Ordinal }}').children[1]);
+                 const sel = window.getSelection();
+                 sel.removeAllRanges();
+                 sel.addRange(range);
+                 document.execCommand('copy');
+                 sel.removeAllRanges();
+                 let button = document.getElementById('codeblock_copy_{{ .Ordinal }}');
+                 button.setAttribute('src', '/svg/check-bold.svg');
+                 setTimeout(() => button.setAttribute('src', '/svg/copy.svg'), 500);"
+    />
+    {{ if transform.CanHighlight $lang }}
+        {{ highlight .Inner $lang }}
+    {{ else }}
+        <div class="highlight"><pre><code>{{ .Inner }}</code></pre></div>
+    {{ end }}
+</div>

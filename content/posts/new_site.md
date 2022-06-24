@@ -4,7 +4,7 @@ date: 2022-06-19T12:00:15+02:00
 draft: false
 ---
 
-I finally took the time to give this website it's long needed rewrite.
+I finally took the time to give this website its long needed rewrite.
 <!--more-->
 I finished the previous version of this site just a couple months ago. However, I made a mistake: I created it using React (and Vite).
 This meant that not only was it too complicated to maintain - It was also needlessly bloated and dependant on JavaScript.
@@ -34,3 +34,34 @@ Cool horizontal line:
 ---
 
 [Hyperlinks](https://amogus.org) and `codeblocks`.
+
+```ts
+// Typescript codeblock
+const var1 = 'Hello';
+let var2 = 'world';
+function helloworld() { return `${var1}, ${var2}!` }
+```
+
+```json
+{
+    "what": 1,
+    "a": "b",
+    "array": [
+        "cool"
+    ],
+    "nfkbdgjgj": { "dfugihdjfgk": [ 1, 2, 3 ] },
+    this should be marked as error
+}
+```
+
+```
+Codeblock without a language set. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+```
+
+- Cool
+- Unordered
+- List
+
+1) Ordered
+2) Lists
+3) Too!

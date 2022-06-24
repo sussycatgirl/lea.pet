@@ -8,3 +8,7 @@ disableKinds = [ "taxonomy", "term", "RSS" ]
   domain = "janderedev.xyz"
   script = "https://stats.fatalerrorcoded.eu/js/stats.js"
   api = "https://stats.fatalerrorcoded.eu/api/stats"
+
+[markup]
+  [markup.highlight]
+    noClasses = false

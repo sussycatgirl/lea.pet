@@ -86,7 +86,7 @@ title: "Donations"
     function reveal(currency) {
         const text = document.getElementById(currency + '_text');
         text.innerText = addresses[currency];
-        text.className = 'crypto-address';
+        text.className = 'crypto-address no-codeblock';
         text.onclick = undefined;
     }
 
@@ -122,9 +122,9 @@ title: "Donations"
 <noscript>
     <div class="noscript-container">
         <h3>Monero</h3>
-        <span><code>87eQbhUqmtF3mZxXvNG6h5d8zognD1NMoFCUZndXyfzABh8UsKv5ikC4H5EMgDrYA7hK2SH1Sugw9PyGGg3fzjB4Sh5KBFJ</code></span>
+        <span><code class="no-codeblock">87eQbhUqmtF3mZxXvNG6h5d8zognD1NMoFCUZndXyfzABh8UsKv5ikC4H5EMgDrYA7hK2SH1Sugw9PyGGg3fzjB4Sh5KBFJ</code></span>
         <h3>BTC</h3>
-        <span><code>bc1qreryh89wnx3d5af9s5w48jvv8eazx4cuyqqrwa</code></span>
+        <span><code class="no-codeblock">bc1qreryh89wnx3d5af9s5w48jvv8eazx4cuyqqrwa</code></span>
     </div>
 </noscript>
 
@@ -135,11 +135,11 @@ title: "Donations"
             <div style="width: 32px; justify-content: center; display: flex">
                 <img class="currency-img" src="/images/monero.png" />
               </div>
-              <span><code>Monero</code></span>
+              <span><code class="no-codeblock">Monero</code></span>
         </div>
         <div style="display: flex; flex-direction: row; justify-content: left;">
             <div class="crypto-address-part">
-                <code class="crypto-address crypto-address-collapsed" onclick="reveal('monero')" id="monero_text">87eQbhUq..4Sh5KBFJ</code>
+                <code class="crypto-address crypto-address-collapsed no-codeblock" onclick="reveal('monero')" id="monero_text">87eQbhUq..4Sh5KBFJ</code>
             </div>
             <img class="copy-button copy-button-effects" src="/svg/copy.svg" onclick="copy('monero')" id="monero_button" />
         </div>
@@ -151,11 +151,11 @@ title: "Donations"
             <div style="width: 32px; justify-content: center; display: flex">
                 <img class="currency-img" src="/images/bitcoin.png" />
               </div>
-              <span><code>Bitcoin</code></span>
+              <span><code class="no-codeblock">Bitcoin</code></span>
         </div>
         <div style="display: flex; flex-direction: row; justify-content: left;">
             <div class="crypto-address-part">
-                <code class="crypto-address crypto-address-collapsed" onclick="reveal('bitcoin')" id="bitcoin_text">bc1qrery..cuyqqrwa</code>
+                <code class="crypto-address crypto-address-collapsed no-codeblock" onclick="reveal('bitcoin')" id="bitcoin_text">bc1qrery..cuyqqrwa</code>
             </div>
             <img class="copy-button copy-button-effects" src="/svg/copy.svg" onclick="copy('bitcoin')" id="bitcoin_button" />
         </div>
