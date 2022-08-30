@@ -5,22 +5,6 @@
     100% { opacity: 1; }
 }
 
-@keyframes welcome-text-shadow-pulse {
-    $color: #ffffff88;
-
-    0% {
-        text-shadow: 0 0 0px $color;
-    }
-
-    50% {
-        text-shadow: 0 0 15px $color;
-    }
-
-    100% {
-        text-shadow: 0 0 0px $color;
-    }
-}
-
 .greeting-area {
     width: 100%;
     height: calc(100vh - 48px); // 40px navbar height + 8px padding
@@ -53,12 +37,6 @@
 .greeting-welcome .sub-text {
     color: $primary-foreground;
     font-weight: 300;
-}
-
-.greeting-welcome .main-text, .greeting-welcome .sub-text {
-    animation: welcome-text-shadow-pulse 15s infinite;
-    animation-fill-mode: backwards;
-    animation-delay: 5s;
 }
 
 .greeting-socials {
