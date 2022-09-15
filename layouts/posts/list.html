@@ -26,14 +26,47 @@
         </a>
     </div>
 
+    {{ $items := slice }}
+    {{ $gists := getJSON "https://api.github.com/users/janderedev/gists" }}
+
     {{ range .Pages }}
+        {{/* Posts */}}
+        {{
+            $item := dict
+                "isGist" false
+                "PublishDate" .PublishDate
+                "ReadingTime" .ReadingTime
+                "Draft" .Draft
+                "RelPermalink" .RelPermalink
+                "Summary" .Summary
+        }}
+        {{ $items = $items | append $item }}
+    {{ end }}
+
+    {{ range $gists }}
+        {{/* Gists */}}
+        {{
+            $item := dict
+                "isGist" true
+                "PublishDate" (.created_at | time.AsTime)
+                "RelPermalink" .html_url
+                "Summary" .description
+        }}
+        {{ $items = $items | append $item }}
+    {{ end }}
+
+    {{ range sort $items "PublishDate" "desc" }}
         <hr />
 
         <article class="article-card">
             <header>
                 <span class="text">
                     {{ .PublishDate.Format "January 2, 2006" }} ·
-                    {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }}
+                    {{ if .isGist }}
+                        Gist
+                    {{ else }}
+                        {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }}
+                    {{ end }}
                 </span>
                 {{ if .Draft }}
                     <span> · Draft</span>
@@ -42,7 +75,9 @@
             </header>
 
             <div>
-                <p>{{ .Summary }} <a href="{{ .RelPermalink }}">Read more &rsaquo;</a></p>
+                <p>{{ .Summary }} <a href="{{ .RelPermalink }}" target="{{ if .isGist }}_blank{{ else }}_self{{ end }}">
+                    {{ if .isGist }}View{{ else }}Read more{{ end }} &rsaquo;
+                </a></p>
             </div>
         </article>
     {{ end }}
