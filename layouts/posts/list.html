@@ -1,11 +1,13 @@
 {{ define "head" }}
+    {{ $gists := getJSON "https://api.github.com/users/janderedev/gists" }}
     {{ $postCount := len .Pages }}
+    {{ $gistCount := len $gists }}
     {{ $readingTime := 0 }}
     {{ range .Pages }} {{ $readingTime = add $readingTime .ReadingTime }} {{ end }}
     <meta property="og:title" content="Posts - janderedev.xyz" />
     <meta
         property="og:description"
-        content="{{ $postCount }} post{{ if ne $postCount 1 }}s{{ end }} with a total reading time of {{ $readingTime }} minute{{ if ne $readingTime 1 }}s{{ end }}"
+        content="{{ $postCount }} post{{ if ne $postCount 1 }}s{{ end }} and {{ $gistCount }} gist{{ if ne $gistCount 1 }}s{{ end }} with a total reading time of {{ $readingTime }} minute{{ if ne $readingTime 1 }}s{{ end }}"
     />
     <meta property="og:url" content="{{ .RelPermalink }}" />
 
