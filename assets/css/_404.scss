@@ -10,12 +10,12 @@
     justify-content: center;
     text-align: center;
     margin-top: 5vh;
+    color: #bbbbbb;
+    font-family: "Roboto";
 }
 
 @media (max-width: 370px) {
     .bg-text-404 {
-        user-select: none;
         font-size: 100px;
-        color: #3b3b3b;
     }
 }
