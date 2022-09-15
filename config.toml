@@ -2,7 +2,7 @@ baseURL = 'https://janderedev.xyz/'
 languageCode = 'en-us'
 title = 'janderedev.xyz'
 enableGitInfo = true
-disableKinds = [ "taxonomy", "term", "RSS" ]
+disableKinds = [ "taxonomy", "term" ]
 
 [params.plausible]
   domain = "janderedev.xyz"
@@ -12,3 +12,6 @@ disableKinds = [ "taxonomy", "term", "RSS" ]
 [markup]
   [markup.highlight]
     noClasses = false
+
+[author]
+  name = "Jan"
