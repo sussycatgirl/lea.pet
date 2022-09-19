@@ -75,8 +75,13 @@ mark {
 hr {
     width: 100%;
     animation: hr_appear 0.8s cubic-bezier(.17,.84,.44,1);
+    color: $primary-foreground;
 }
 
 .article-card {
     margin-top: 20px;
+}
+
+.crypto-container-outer code, .copy-button {
+    color: $primary-foreground;
 }

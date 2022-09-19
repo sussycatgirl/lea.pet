@@ -2,7 +2,9 @@
 <div class="greeting-socials-container" {{ $style }}>
     <div class="greeting-socials-image-container">
         {{/* Todo: Figure out how to make this image not appear in w3m */}}
-        <img class="greeting-socials-image" src="{{ .image_url }}" alt="{{ .alt }}" />
+        <div class="greeting-socials-image">
+            {{ partial (printf "svg/%s" .svg) }}
+        </div>
     </div>
     {{ if .obscured }}
         {{ $id := md5 .content }}

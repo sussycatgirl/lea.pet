@@ -1,7 +1,7 @@
 .bg-text-404 {
     user-select: none;
     font-size: 200px;
-    color: #3b3b3b;
+    color: rgba($color: $primary-foreground, $alpha: 0.4);
 }
 
 .container-404 {
@@ -10,7 +10,7 @@
     justify-content: center;
     text-align: center;
     margin-top: 5vh;
-    color: #bbbbbb;
+    color: rgba($color: $primary-foreground, $alpha: 0.85);
     font-family: "Roboto";
 }
 
