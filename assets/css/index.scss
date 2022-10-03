@@ -19,14 +19,22 @@
 }
 
 .greeting-welcome {
-    max-width: 200px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    max-width: 200px;
+    transition: transform 0.5s;
+}
+
+.greeting-welcome:hover {
+    transform: scale(1.03);
 }
 
 .greeting-welcome span {
     font-size: 50px;
     break-after: always;
     font-family: "Quicksand", sans-serif;
+    user-select: none;
 }
 
 .greeting-welcome .main-text {
@@ -53,10 +61,16 @@
     opacity: 0;
     animation: social-entry-fade-in .5s;
     animation-fill-mode: forwards;
+    transition: transform .5s, margin .5s;
 }
 
 .greeting-socials-container.hidden {
     opacity: 0;
+}
+
+.greeting-socials-container:hover {
+    transform: scale(1.05);
+    margin: 8px 0;
 }
 
 .greeting-socials-image-container {
