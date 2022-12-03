@@ -4,7 +4,7 @@
     {{ $gistCount := len $gists }}
     {{ $readingTime := 0 }}
     {{ range .Pages }} {{ $readingTime = add $readingTime .ReadingTime }} {{ end }}
-    <meta property="og:title" content="Posts - janderedev.xyz" />
+    <meta property="og:title" content="Posts - lea.pet" />
     <meta
         property="og:description"
         content="{{ $postCount }} post{{ if ne $postCount 1 }}s{{ end }} and {{ $gistCount }} gist{{ if ne $gistCount 1 }}s{{ end }} with a total reading time of {{ $readingTime }} minute{{ if ne $readingTime 1 }}s{{ end }}"

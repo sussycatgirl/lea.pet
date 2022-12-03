@@ -1,11 +1,11 @@
-baseURL = 'https://janderedev.xyz/'
+baseURL = 'https://lea.pet/'
 languageCode = 'en-us'
-title = 'janderedev.xyz'
+title = 'lea.pet'
 enableGitInfo = true
 disableKinds = [ "taxonomy", "term" ]
 
 [params.plausible]
-  domain = "janderedev.xyz"
+  domain = "lea.pet"
   script = "https://stats.fatalerrorcoded.eu/js/stats.js"
   api = "https://stats.fatalerrorcoded.eu/api/stats"
 
@@ -14,4 +14,4 @@ disableKinds = [ "taxonomy", "term" ]
     noClasses = false
 
 [author]
-  name = "Jan"
+  name = "Lea"
