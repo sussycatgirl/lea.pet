@@ -78,6 +78,18 @@ hr {
     color: $primary-foreground;
 }
 
+blockquote {
+    border-inline-start: 4px solid $primary-foreground;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+blockquote > * {
+    padding: 2px 12px 2px 8px;
+}
+
 .article-card {
     margin-top: 20px;
 }
