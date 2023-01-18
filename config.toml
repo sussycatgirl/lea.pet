@@ -1,11 +1,11 @@
-baseURL = 'https://lea.pet/'
+baseURL = 'https://me.lea.pet/'
 languageCode = 'en-us'
 title = 'lea.pet'
 enableGitInfo = true
 disableKinds = [ "taxonomy", "term" ]
 
 [params.plausible]
-  domain = "lea.pet"
+  domain = "me.lea.pet"
   script = "https://stats.fatalerrorcoded.eu/js/stats.js"
   api = "https://stats.fatalerrorcoded.eu/api/stats"
 
