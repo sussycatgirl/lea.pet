@@ -60,7 +60,7 @@ Type   Domain                       Record value
 
 MX     example.com                  vps.srv.janderedev.xyz
 CNAME  autodiscover.example.com     vps.srv.janderedev.xyz
-CNAME  autoconfog.example.com       vps.srv.janderedev.xyz
+CNAME  autoconfig.example.com       vps.srv.janderedev.xyz
 TXT    example.com                  v=spf1 mx -all
 TXT    _dmarc.example.com           v=DMARC1; p=reject; rua=mailto:dmarc@janderedev.xyz
 TXT    dkim._domainkey.example.com  (read section below)
