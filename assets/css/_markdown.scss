@@ -146,3 +146,21 @@ code:not(.no-codeblock) {
     .gd { color: $nord11; } /* Generic.Deleted & Diff Deleted */
     .gi { color: $nord14; } /* Generic.Inserted & Diff Inserted */
 }
+
+.md-image-outer {
+    display: flex;
+    justify-content: center;
+}
+
+.md-image {
+    max-width: calc(min(600px, calc(100vw - 32px)));
+    max-height: calc(max(400px, 40vh));
+    margin: 12px;
+    border-radius: 8px;
+    transition: transform 0.2s, border-radius 0.2s;
+}
+
+.md-image:hover {
+    transform: scale(1.05);
+    border-radius: 0;
+}
