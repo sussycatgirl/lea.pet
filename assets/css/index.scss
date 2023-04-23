@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 200px;
-    transition: transform 0.5s;
+    transition: transform 0.2s;
 }
 
 .greeting-welcome:hover {
@@ -61,7 +61,7 @@
     opacity: 0;
     animation: social-entry-fade-in .5s;
     animation-fill-mode: forwards;
-    transition: transform .5s, margin .5s;
+    transition: transform .2s, margin .2s;
 }
 
 .greeting-socials-container.hidden {
@@ -70,7 +70,6 @@
 
 .greeting-socials-container:hover {
     transform: scale(1.05);
-    margin: 8px 0;
 }
 
 .greeting-socials-image-container {
