@@ -4,7 +4,7 @@ date: 2023-06-07T09:09:02+02:00
 draft: false
 ---
 
-Leaving this here mainly as a reminder to myself. These options work in both Thunderbird and K-9 Mail, but any client that supports OAuth2 should work.
+Leaving this here mainly as a reminder to myself.<!--more--> These options work in both Thunderbird and K-9 Mail, but any client that supports OAuth2 should work.
 
 ### IMAP
 ```
