@@ -33,17 +33,19 @@
 
     {{ range .Pages }}
         {{/* Posts */}}
-        {{
-            $item := dict
-                "isGist" false
-                "PublishDate" .PublishDate
-                "ReadingTime" .ReadingTime
-                "Draft" .Draft
-                "RelPermalink" .RelPermalink
-                "Title" .Title
-                "Summary" .Summary
-        }}
-        {{ $items = $items | append $item }}
+        {{ if not (eq .Params.hidden true) }}
+            {{
+                $item := dict
+                    "isGist" false
+                    "PublishDate" .PublishDate
+                    "ReadingTime" .ReadingTime
+                    "Draft" .Draft
+                    "RelPermalink" .RelPermalink
+                    "Title" .Title
+                    "Summary" .Summary
+            }}
+            {{ $items = $items | append $item }}
+        {{ end }}
     {{ end }}
 
     {{ range $gists }}
