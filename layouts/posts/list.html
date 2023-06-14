@@ -3,7 +3,11 @@
     {{ $postCount := len .Pages }}
     {{ $gistCount := len $gists }}
     {{ $readingTime := 0 }}
-    {{ range .Pages }} {{ $readingTime = add $readingTime .ReadingTime }} {{ end }}
+    {{ range .Pages }}
+        {{ if not (eq .Params.hidden true) }}
+            {{ $readingTime = add $readingTime .ReadingTime }}
+        {{ end }}
+    {{ end }}
     <meta property="og:title" content="Posts - lea.pet" />
     <meta
         property="og:description"
