@@ -1,5 +1,5 @@
 {{ define "head" }}
-    {{ $gists := getJSON "https://api.github.com/users/janderedev/gists" }}
+    {{ $gists := getJSON "https://api.github.com/users/sussycatgirl/gists" }}
     {{ $postCount := len .Pages }}
     {{ $gistCount := len $gists }}
     {{ $readingTime := 0 }}
@@ -33,7 +33,7 @@
     </div>
 
     {{ $items := slice }}
-    {{ $gists := getJSON "https://api.github.com/users/janderedev/gists" }}
+    {{ $gists := getJSON "https://api.github.com/users/sussycatgirl/gists" }}
 
     {{ range .Pages }}
         {{/* Posts */}}
