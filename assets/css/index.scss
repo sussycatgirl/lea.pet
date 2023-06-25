@@ -130,7 +130,16 @@ main {
 }
 
 .navbar {
-    background-color: rgba($color: $secondary-background, $alpha: 0.8) !important;
+    box-sizing: unset !important;
+    background-color: transparent !important;
+    padding: 8px 0 !important;
+
+    .title, .links {
+        background-color: rgba($color: $secondary-background, $alpha: 0.8);
+        border-radius: 8px;
+        padding: 12px 16px !important;
+        height: fit-content;
+    }
 }
 
 .navbar-inner {
