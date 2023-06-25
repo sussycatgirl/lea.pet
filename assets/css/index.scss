@@ -5,8 +5,14 @@
     100% { opacity: 1; }
 }
 
+main {
+    justify-content: center !important;
+    flex-direction: row !important;
+}
+
 .greeting-area {
     width: 100%;
+    max-width: 600px;
     height: calc(100vh - 48px); // 40px navbar height + 8px padding
 }
 
@@ -16,6 +22,9 @@
     justify-content: space-evenly;
     top: calc(50% - 2vw);
     transform: translateY(-50%);
+    padding: 32px;
+    border-radius: 24px;
+    background-color: rgba($color: $secondary-background, $alpha: 0.8);
 }
 
 .greeting-welcome {
@@ -24,6 +33,7 @@
     justify-content: center;
     max-width: 200px;
     transition: transform 0.2s;
+    margin: 0 32px;
 }
 
 .greeting-welcome:hover {
@@ -109,4 +119,20 @@
     .greeting-flex-container .greeting-socials {
         margin-top: 13vw;
     }
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    z-index: -1000;
+    width: fit-content;
+    height: fit-content;
+}
+
+.navbar {
+    background-color: rgba($color: $secondary-background, $alpha: 0.8) !important;
+}
+
+.navbar-inner {
+    max-width: 100% !important;
 }

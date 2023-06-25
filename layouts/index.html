@@ -13,6 +13,19 @@
 {{ end }}
 
 {{ define "main" }}
+<div class="background-video">
+    <!--
+        All of these assets are stolen from Steam
+        but it's ok because I bought them
+        (with Steam points)
+        :)
+        https://store.steampowered.com/points/shop/c/backgrounds/reward/223914
+    -->
+    <video autoplay muted loop poster="/bg-poster.jpg">
+        <source src="/bg.webm" type="video/webm" />
+        <source src="/bg.mp4" type="video/mp4" />
+    </video>
+</div>
 <main>
     <br style="display: none;" /> <!-- Specifically for readability with terminal browsers -->
     <div class="greeting-area">
