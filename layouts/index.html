@@ -52,9 +52,14 @@
 <script>
     // boredom
     const context = new AudioContext();
-    document.getElementById("play-button").style.display = "unset";
+    const playButton = document.getElementById("play-button");
+    playButton.style.display = "unset";
 
     const startPlayback = () => {
+        playButton.onclick = undefined;
+        playButton.style.transform = "translateY(100px)";
+        playButton.style.opacity = "0";
+
         console.log("Loading first file");
         fetch("/bg_start.mp3")
             .then(data => data.arrayBuffer())
