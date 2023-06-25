@@ -26,6 +26,9 @@
         <source src="/bg.mp4" type="video/mp4" />
     </video>
 </div>
+<div class="button" id="play-button" style="position: fixed; right: 16px; bottom: 16px; display: none;" onclick="startPlayback()">
+    ⏵
+</div>
 <main>
     <br style="display: none;" /> <!-- Specifically for readability with terminal browsers -->
     <div class="greeting-area">
@@ -45,4 +48,40 @@
         </div>
     </div>
 </main>
+
+<script>
+    // boredom
+    const context = new AudioContext();
+    document.getElementById("play-button").style.display = "unset";
+
+    const startPlayback = () => {
+        console.log("Loading first file");
+        fetch("/bg_start.mp3")
+            .then(data => data.arrayBuffer())
+            .then(buffer => context.decodeAudioData(buffer))
+            .then(buffer => {
+                const startSource = context.createBufferSource();
+                startSource.buffer = buffer;
+                startSource.connect(context.destination);
+                startSource.start();
+                console.log("Starting playback and loading second file");
+
+                fetch("/bg_loop.mp3")
+                    .then(data => data.arrayBuffer())
+                    .then(buffer => context.decodeAudioData(buffer))
+                    .then(buffer => {
+                        console.log("Second file loaded");
+                        const loopSource = context.createBufferSource();
+                        loopSource.connect(context.destination);
+                        loopSource.buffer = buffer;
+                        loopSource.loop = true;
+
+                        startSource.onended = () => {
+                            console.log("Initial playback ended, playing loop");
+                            loopSource.start();
+                        }
+                    });
+            });
+        }
+</script>
 {{ end }}
