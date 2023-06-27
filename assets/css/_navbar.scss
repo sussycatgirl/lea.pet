@@ -37,3 +37,18 @@
 .navbar .links a {
     margin-left: 8px;
 }
+
+
+/* Hide "lea.pet" title when the screen is too small */
+@media (max-width: 375px) {
+    .title {
+        display: none;
+    }
+    .links {
+        width: calc(100% - 16px);
+        justify-content: center;
+    }
+    .navbar-inner {
+        justify-content: center !important;
+    }
+}
