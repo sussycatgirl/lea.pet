@@ -1,0 +1,34 @@
+@keyframes bouncy-cat {
+    from {
+        transform: translateY(0px);
+        height: 28px;
+    }
+    to {
+        transform: translateY(-16px);
+        height: 40px;
+    }
+}
+
+.footer {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    hr {
+        width: 95%;
+        animation: unset;
+        opacity: 0.5;
+        margin-bottom: 24px;
+    }
+
+    .cat {
+        height: 24px;
+        margin: 4px;
+        user-select: none;
+        display: inline-block;
+
+        &:hover {
+            animation: bouncy-cat infinite alternate 0.2s;
+        }
+    }
+}
