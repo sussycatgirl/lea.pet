@@ -100,6 +100,47 @@ blockquote > * {
     padding: 2px 12px 2px 8px;
 }
 
+table {
+    color: $primary-foreground;
+    font-family: $text-font;
+    table-layout: fixed;
+    margin: 10px;
+    border-radius: 8px;
+    border-collapse: collapse;
+    overflow: hidden; /* <-- for whatever reason this makes border radius work */
+
+    thead {
+        font-size: 16px;
+        background-color: mix($primary-foreground, $primary-background, 8%);
+        border-bottom: 1px solid rgba($color: $primary-foreground, $alpha: 0.3);
+    }
+
+    td {
+        padding: 6px;
+    }
+
+    th {
+        padding: 8px;
+    }
+
+    tbody tr {
+        transition: background-color 0.2s;
+
+        &:nth-child(even) {
+            background-color: mix($primary-foreground, $primary-background, 15%);
+        }
+
+        &:nth-child(odd) {
+            background-color: mix($primary-foreground, $primary-background, 10%);
+        }
+
+        &:hover {
+            background-color: mix($primary-foreground, $primary-background, 18%);
+            color: mix($primary-foreground, #ffffff, 50%);
+        }
+    }
+}
+
 .article-card {
     margin-top: 20px;
 }
