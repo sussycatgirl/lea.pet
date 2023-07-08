@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'lea.pet'
 enableGitInfo = true
 disableKinds = [ "taxonomy", "term" ]
+enableRobotsTXT = true
 
 [params.plausible]
   domain = "me.lea.pet"
@@ -15,3 +16,8 @@ disableKinds = [ "taxonomy", "term" ]
 
 [author]
   name = "Lea"
+
+[sitemap]
+  filename = 'sitemap.xml'
+  changefreq = 'weekly'
+  priority = 0.5

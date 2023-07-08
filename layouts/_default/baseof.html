@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:type" content="website" />
         <meta name="theme-color" content="#8260E0" />
+        {{ if .Params.hidden }}
+        <meta name="robots" content="noindex">
+        {{ end }}
         {{- block "head" . }}{{ end -}}
 
         {{ $mainCss := resources.Get "css/main.scss" | resources.ToCSS | resources.Fingerprint }}
