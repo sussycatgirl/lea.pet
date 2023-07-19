@@ -29,6 +29,7 @@
         {{ end -}}
     </head>
     <body>
+        {{ partial "css-warning" . }}
         {{ partial "navbar" . }}
         <div class="main-container">{{ block "main" . }}{{ end }}</div>
         {{ partial "footer" . }}

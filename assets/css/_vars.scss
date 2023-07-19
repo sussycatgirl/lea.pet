@@ -1,7 +1,29 @@
-$primary-background: #150d1f;
-$secondary-background: #21182c;
-$primary-foreground: #cfb3d4;
-$color-link: #b18fe9;
-$color-mark: #8260e0;
+$primary-background: var(--primary-background);
+$secondary-background: var(--secondary-background);
+$primary-foreground: var(--primary-foreground);
+$color-link: var(--color-link);
+$color-mark: var(--color-mark);
 $text-font: "Roboto", sans-serif;
 $content-width: 50em;
+
+:root {
+    --primary-background: #150d1f;
+    --secondary-background: #21182c;
+    --primary-foreground: #cfb3d4;
+    --color-link: #b18fe9;
+    --color-mark: #8260e0;
+    --logo-color-left: #8884ff;
+    --strongest-color: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-background: #ECB2EC;
+        --secondary-background: #E198E1;
+        --primary-foreground: #462e4b;
+        --color-link: #7447BD;
+        --color-mark: #8260e0;
+        --logo-color-left: #4e4c94;
+        --strongest-color: #000000;
+    }
+}

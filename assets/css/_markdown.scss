@@ -7,11 +7,11 @@
         cursor: pointer;
 
         text-decoration: underline;
-        text-decoration-color: rgba($primary-foreground, 0);
+        text-decoration-color: transparent;
         transition: text-decoration-color .3s;
 
         &:hover {
-            text-decoration-color: rgba($primary-foreground, .7);
+            text-decoration-color: color-mix(to srgb, transparent .7, $primary-foreground);
         }
     }
 }

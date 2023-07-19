@@ -111,7 +111,7 @@ table {
 
     thead {
         font-size: 16px;
-        background-color: mix($primary-foreground, $primary-background, 8%);
+        background-color: color-mix(in srgb, $primary-foreground 8%, $primary-background);
         border-bottom: 1px solid rgba($color: $primary-foreground, $alpha: 0.3);
     }
 
@@ -127,16 +127,16 @@ table {
         transition: background-color 0.2s;
 
         &:nth-child(even) {
-            background-color: mix($primary-foreground, $primary-background, 15%);
+            background-color: color-mix(in srgb, $primary-foreground 15%, $primary-background);
         }
 
         &:nth-child(odd) {
-            background-color: mix($primary-foreground, $primary-background, 10%);
+            background-color: color-mix(in srgb, $primary-foreground 10%, $primary-background);
         }
 
         &:hover {
-            background-color: mix($primary-foreground, $primary-background, 18%);
-            color: mix($primary-foreground, #ffffff, 50%);
+            background-color: color-mix(in srgb, $primary-foreground 18%, $primary-background);
+            color: color-mix(in srgb, $primary-foreground 50%, var(--strongest-color));
         }
     }
 }
@@ -151,4 +151,21 @@ table {
 
 .big-text {
     font-size: 24px;
+}
+
+.css-warning {
+    width: 100%;
+    margin: 0;
+    background-color: #924546;
+    color: #ffffff;
+    font-family: $text-font;
+    font-size: 16px;
+    padding: 4px;
+    padding-left: 8px;
+}
+
+@supports (background-color: color-mix(in srgb, $primary-foreground 8%, $primary-background)) {
+    .css-warning {
+        display: none;
+    }
 }
