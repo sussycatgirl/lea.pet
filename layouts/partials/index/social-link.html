@@ -2,7 +2,7 @@
 <div class="greeting-socials-container" {{ $style }}>
     <div class="greeting-socials-image-container">
         {{/* Todo: Figure out how to make this image not appear in w3m */}}
-        <div class="greeting-socials-image">
+        <div class="greeting-socials-image" title="{{ .svg }}">
             {{ partial (printf "svg/%s" .svg) }}
         </div>
     </div>
