@@ -61,6 +61,8 @@ Go to `Settings` > `Privacy & Security` > `Certificates` > `Security Devices`
 
 Click "Load" and enter the path to `libykcs11.so`. On my system it's at `/usr/lib/libykcs11.so`, try `find / -name libykcs11.so 2>/dev/null` if you can't find it.
 
+> *ℹ️ libykcs11 is provided by `yubico-piv-tool`*
+
 {{< image "rsa-shenanigans/ff-settings-2.png" >}}
 
 ### If Firefox stops prompting for a certificate...
