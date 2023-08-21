@@ -44,9 +44,10 @@ If you have ADB set up, you can do so quickly with this command:
 adb shell 'echo -n "your-client-id-here" > /storage/emulated/0/reddit_client_id_revanced.txt'
 ```
 
-Or with Termux (root):
+Or with Termux:
 ```bash
-echo -n "your-client-id-here" | sudo tee /storage/emulated/0/reddit_client_id_revanced.txt
+termux-setup-storage # if you haven't already
+echo -n "your-client-id-here" | tee /storage/emulated/0/reddit_client_id_revanced.txt
 ```
 
 Otherwise, you can use any text editor app for this. Just make sure that there are no trailing newlines or spaces.
