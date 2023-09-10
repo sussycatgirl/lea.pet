@@ -28,8 +28,8 @@ body {
     transform: translateY(-50%);
     padding: 32px;
     border-radius: 24px;
-    background-color: $secondary-background;
-    opacity: 0.8;
+    background-color: rgba($secondary-background-rgb, $home-card-opacity);
+    backdrop-filter: blur($home-card-blur);
 }
 
 .greeting-welcome {
@@ -147,8 +147,8 @@ body {
     padding: 8px 0 !important;
 
     .title, .links {
-        background-color: $secondary-background;
-        opacity: 0.8;
+        background-color: rgba($secondary-background-rgb, $home-card-opacity);
+        backdrop-filter: blur($home-card-blur);
         border-radius: 8px;
         padding: 12px 16px !important;
         height: fit-content;
@@ -160,8 +160,8 @@ body {
 }
 
 .button {
-    background-color: $secondary-background;
-    opacity: 0.8;
+    background-color: rgba($secondary-background-rgb, $home-card-opacity);
+    backdrop-filter: blur($home-card-blur);
     color: $primary-foreground;
     border-radius: 8px;
     padding: 12px 16px !important;

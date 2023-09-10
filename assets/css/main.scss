@@ -112,7 +112,7 @@ table {
     thead {
         font-size: 16px;
         background-color: color-mix(in srgb, $primary-foreground 8%, $primary-background);
-        border-bottom: 1px solid rgba($color: $primary-foreground, $alpha: 0.3);
+        border-bottom: 1px solid color-mix(in srgb, $primary-foreground 0.3, transparent);
     }
 
     td {
