@@ -19,7 +19,7 @@ This entire procedure is done on Android/mobile, you won't need any extra or spe
 
 # Checking (and probably even patch) an app
 
-Easiest way to check if you can patch an app is by opening the ReVanced Patcher and heading into the `Patcher` category. Tap on `Select an application`and apps that you both have installed and are patchable will show up first in the list with all of the metadata complete:
+Easiest way to check if you can patch an app is by opening the ReVanced Patcher and heading into the `Patcher` category. Tap on `Select an application` and apps that you both have installed and are patchable will show up first in the list with all of the metadata complete:
 
 {{< image "revanced-guide/select-an-application.png" >}}
 
