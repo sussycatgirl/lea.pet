@@ -2,6 +2,8 @@
 title: "Enforcing MFA in authentik for administrators only"
 date: 2023-04-23T11:50:50+02:00
 draft: false
+author: Lea
+author_url: https://lea.pet/@lea
 ---
 
 This will be a short tutorial to set up [authentik](https://goauthentik.io/) to enforce MFA using WebAuthn keys for admins while allowing normal users to use them as single factor.

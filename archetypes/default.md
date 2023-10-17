@@ -1,6 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+draft: false
+hidden: false
+author: Lea
+author_url: https://lea.pet/@lea
 ---
 

@@ -2,6 +2,8 @@
 title: "Patching your favourite Reddit client to keep working after the API pricing change"
 date: 2023-07-01T19:47:06+02:00
 draft: false
+author: Lea
+author_url: https://lea.pet/@lea
 ---
 
 [ReVanced](https://github.com/revanced) is mainly used to patch the YouTube app to disable ads and some of the obnoxious "features", but we can also use it to make our favourite Android Reddit clients work again.

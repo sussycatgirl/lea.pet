@@ -2,6 +2,8 @@
 title: "Discord Experiments"
 date: 2023-09-15T17:19:16+02:00
 draft: false
+author: Lea
+author_url: https://lea.pet/@lea
 ---
 
 JS snippet that allows access to Discord's Experiments tab and other developer tools. Posting this here so I don't have to dig through GitHub gists all the time.

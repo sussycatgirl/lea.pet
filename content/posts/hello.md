@@ -2,6 +2,8 @@
 title: "Test post please ignore"
 date: 2022-12-03T22:26:00.903Z
 draft: false
+author: Lea
+author_url: https://lea.pet/@lea
 ---
 
 uwu owo :3 >////< *purrs* owo aujfghgajgnhgahgjdfdhdfjhaurgjdfahjdfhkah :3 nyaaaaaa mrowmrowmewmeowpurrppurrrrrownyameowmrrowmrowmr wmeowmraowrnyaaaamrowmraowmeownyaaaaaaamrowmeonya owo mrowwwwwwwmrowp
