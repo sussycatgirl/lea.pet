@@ -3,6 +3,8 @@ title: "RSA Shenanigans"
 date: 2023-07-26T11:25:40+02:00
 draft: false
 hidden: true
+author: Lea
+author_url: https://lea.pet/@lea
 ---
 
 If you found this, cool! It's not meant to be a guide - I just created this page so I don't have to painstakingly figure all of this out again.

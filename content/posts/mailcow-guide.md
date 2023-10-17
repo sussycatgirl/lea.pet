@@ -2,6 +2,9 @@
 title: "Mailcow Setup Guide"
 date: 2022-12-20T16:17:37+01:00
 draft: false
+hidden: true
+author: Lea
+author_url: https://lea.pet/@lea
 ---
 
 This post is primarily intended for users of my private mailserver, [mail.amogus.cloud](https://mail.amogus.cloud), but some of the information, especially the DNS part, might also be useful to others.
