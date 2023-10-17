@@ -2,6 +2,8 @@
 title: "Patching an App (YouTube) with ReVanced"
 date: 2023-10-12T18:02:56.071Z
 draft: false
+author: Sneexy
+author_url: https://lea.pet/@sneexy
 ---
 
 This is a guide made *not* by Lea, but rather - yours truly - [Sneexy](https://lea.pet/@sneexy)!
