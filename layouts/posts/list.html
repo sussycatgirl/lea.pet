@@ -47,6 +47,7 @@
                     "RelPermalink" .RelPermalink
                     "Title" .Title
                     "Summary" .Summary
+                    "Params" .Params
             }}
             {{ $items = $items | append $item }}
         {{ end }}
@@ -74,6 +75,9 @@
                     {{ if .isGist }}
                         Gist
                     {{ else }}
+                        {{ if (isset .Params "author") }}
+                            By {{ .Params.author }} ·
+                        {{ end }}
                         {{ .ReadingTime }} minute{{ if ne .ReadingTime 1 }}s{{ end }}
                     {{ end }}
                 </span>

@@ -24,6 +24,17 @@
     <main>
         <header>
             <h1>{{ .Title }}</h1>
+            {{ if (isset .Params "author") }}
+            <h4 style="font-size: 16px;">
+                <i>
+                    {{ if (isset .Params "author_url") }}
+                        By <a href="{{ .Params.author_url }}" target="_blank" rel="author"><b>{{ .Params.author }}</b></a>
+                    {{ else }}
+                        By <b>{{ .Params.author }}</b>
+                    {{ end }}
+                </i>
+            </h4>
+            {{ end }}
             <h4>
                 {{ $publishDate := .PublishDate.Format "January 2, 2006" }}
                 {{ $publishDate }} ·
