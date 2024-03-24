@@ -7,8 +7,8 @@ enableRobotsTXT = true
 
 [params.plausible]
   domain = "me.lea.pet"
-  script = "https://stats.fatalerrorcoded.eu/js/stats.js"
-  api = "https://stats.fatalerrorcoded.eu/api/stats"
+  script = "https://stats.lea.pet/js/stats.js"
+  api = "https://stats.lea.pet/api/stats"
 
 [markup]
   [markup.highlight]
