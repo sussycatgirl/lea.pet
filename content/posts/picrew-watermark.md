@@ -7,7 +7,7 @@ author: Lea
 author_url: https://lea.pet/@lea
 ---
 
-Don't worry, I'm not an art thief. But I think this is interesting, so I want to explain how I did it.
+Don't worry, I'm not an art thief. But I think this is interesting, so I want to document how I did it.
 
 <!--more-->
 
