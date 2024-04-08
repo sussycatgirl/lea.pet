@@ -52,6 +52,7 @@ title: "About me"
         align-items: center;
         gap: 12px;
         margin-top: 10px;
+        max-width: 100%;
     }
 
     .socials-svg-outer {
@@ -89,7 +90,19 @@ title: "About me"
         border-radius: 2px;
         filter: grayscale(40%);
         
-        transition: 0.2s filter linear, 0.2s -webkit-filter linear;
+        transition: 0.2s filter linear, 0.2s -webkit-filter linear, 0.2s width linear;
+    }
+
+    @media (max-width: 600px) {
+        .socials-divider {
+            width: 0;
+        }
+    }
+    
+    @media (max-width: 490px) {
+        .greeting-container {
+            flex-direction: column;
+        }
     }
 </style>
 
