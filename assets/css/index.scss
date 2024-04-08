@@ -65,6 +65,11 @@ body {
 .greeting-socials {
     max-width: 300px;
     justify-content: center;
+
+    // 8px padding at the bottom looks weird, padding of 0 messes up the hover underline rendering, 2px seems to work fine
+    .greeting-socials-container:last-of-type {
+        padding-bottom: 2px !important;
+    }
 }
 
 .greeting-socials-container {
