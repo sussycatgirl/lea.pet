@@ -1,4 +1,4 @@
-{{ $style := safeCSS (printf "style='animation-delay: %s00ms;'" .delay) | safeHTMLAttr }}
+{{ $style := safeCSS (printf "style='animation-delay: %s00ms;'" (cast.ToString .delay)) | safeHTMLAttr }}
 <div class="greeting-socials-container" {{ $style }}>
     <div class="greeting-socials-image-container">
         {{/* Todo: Figure out how to make this image not appear in w3m */}}

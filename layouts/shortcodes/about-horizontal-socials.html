@@ -1,0 +1,13 @@
+<div class="socials">
+    {{ range $index, $data := $.Site.Data.socials.items }}
+        {{ if gt $index 0 }}
+            {{ $prevColor := (index $.Site.Data.socials.items (math.Sub $index 1)).color }}
+            <div class="socials-divider" style="background: linear-gradient(90deg, {{ $prevColor }}, {{ $data.color }});"></div>
+        {{ end }}
+        <a href="{{ $data.url }}" target="_blank" class="socials-svg-outer" title="{{ $data.name }}">
+            <div class="socials-svg" style="color: {{ $data.color }}">
+                {{ partial (printf "svg/%s" $data.name) }}
+            </div>
+        </a>
+    {{ end }}
+</div>

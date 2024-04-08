@@ -1,0 +1,26 @@
+items:
+  - name: revolt
+    url: https://rvlt.gg/lea
+    label: "@Lea#5128"
+    color: "#f7717b"
+  - name: discord
+    url: https://discord.com/invite/4pZgvqgYJ8
+    label: "@sussycatgirl"
+    color: "#7F88EC"
+  - name: github
+    url: https://github.com/sussycatgirl
+    label: "sussycatgirl"
+    color: "#83ACA6"
+  - name: fedi
+    url: https://lea.pet/@lea
+    label: "@lea@lea.pet"
+    color: "#76adf4"
+  - name: email
+    url: mailto:meow@lea.pet
+    label: "meow@lea.pet"
+    color: "#ee86e3"
+    obscured: true
+  - name: pronouns-page
+    url: https://en.pronouns.page/@sussycatgirl
+    label: "@sussycatgirl"
+    color: "#ff95bb"

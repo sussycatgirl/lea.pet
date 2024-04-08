@@ -39,12 +39,9 @@
             </div>
 
             <div class="greeting-socials">
-                {{ partial "index/social-link.html" (dict "delay" "1" "svg" "revolt" "href" "https://rvlt.gg/jan" "content" "@Lea#5128") }}
-                {{ partial "index/social-link.html" (dict "delay" "2" "svg" "discord" "href" "https://discord.com/invite/4pZgvqgYJ8" "content" "@sussycatgirl") }}
-                {{ partial "index/social-link.html" (dict "delay" "3" "svg" "github" "href" "https://github.com/sussycatgirl" "content" "sussycatgirl") }}
-                {{ partial "index/social-link.html" (dict "delay" "4" "svg" "fedi" "href" "https://lea.pet/@lea" "content" "@lea@lea.pet") }}
-                {{ partial "index/social-link.html" (dict "delay" "5" "svg" "email" "href" "mailto:meow@lea.pet" "content" "meow@lea.pet" "obscured" "true") }}
-                {{ partial "index/social-link.html" (dict "delay" "6" "svg" "pronouns-page" "href" "https://en.pronouns.page/@sussycatgirl" "content" "@sussycatgirl") }}
+                {{ range $index, $data := $.Site.Data.socials.items }}
+                    {{ partial "index/social-link.html" (dict "delay" (math.Add 1 $index) "svg" $data.name "href" $data.url "content" $data.label "obscured" $data.obscured) }}
+                {{ end }}
             </div>
         </div>
     </div>
