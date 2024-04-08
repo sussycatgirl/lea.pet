@@ -27,10 +27,16 @@ title: "About me"
         border-radius: 16px;
     }
 
-    .greeting-container .pfp {
-        border-radius: 16px;
+    .pfp-container {
         flex-shrink: 1;
+        display: flex;
+    }
+
+    .pfp {
+        border-radius: 16px;
         height: 100px;
+        z-index: 1001;
+        pointer-events: none;
     }
 
     .greeting-container .infoblock {
@@ -104,11 +110,39 @@ title: "About me"
             flex-direction: column;
         }
     }
+
+    .cat-container {
+        width: 100px;
+        height: 100px;
+        margin-left: -100px;
+        z-index: 1000;
+        pointer-events: none;
+        position: relative;
+    }
+
+    .pfp-cat {
+        z-index: 1000;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
 </style>
 
 <div>
     <div class="greeting-container">
-        <img src="/pfp.png" class="pfp" />
+        <div
+            class="pfp-container"
+            onclick="cat()"
+            onmousedown="catdown()"
+            onmouseup="catup()"
+        >
+            <img
+                src="/pfp.png"
+                class="pfp"
+            />
+            <div class="cat-container" id="cat-container"></div>
+        </div>
         <div class="infoblock">
             <p class="text">
                 <span>
@@ -215,3 +249,67 @@ title: "About me"
 
     <center><h1>❤️</h1></center>
 </div>
+
+<script>
+    let rot = 0;
+    let holdtime = 0;
+    let down = false;
+    let ignoreNext = false;
+
+    setInterval(() => {
+        if (down) {
+            holdtime++;
+
+            if (holdtime > 5) {
+                ignoreNext = true;
+                cat(true);
+            }
+        }
+    }, 100);
+
+    function catdown() {
+        down = true;
+    }
+
+    function catup() {
+        rot = 0;
+        holdtime = 0;
+        down = false;
+    }
+
+    function cat(wave) {
+        while (rot > 360) rot -= 360;
+        if (down && !wave) return;
+        if (ignoreNext && !wave) {
+            ignoreNext = false;
+            return;
+        }
+
+        const catContainer = document.getElementById("cat-container");
+        const rotation = wave ? rot++ * 10 : Math.random() * 360;
+        const cat = document.createElement("span");
+        cat.innerText = "🐈";
+        cat.classList.add("pfp-cat");
+        catContainer.appendChild(cat);
+
+        let prev = null;
+        let x = 0;
+        const animate = (ts) => {
+            const elapsed = prev != null ? ts - prev : 0;
+            prev = ts;
+
+            x += elapsed / 10;
+            const pos = -(x * (x - 100)) / 50;
+
+            cat.style.transform = `rotate(${rotation}deg) translateY(-${pos}px)`;
+
+            if (x < 100) {
+                requestAnimationFrame(animate);
+            } else {
+                cat.remove();
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+</script>
