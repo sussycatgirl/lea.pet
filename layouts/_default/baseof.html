@@ -12,6 +12,7 @@
         {{- block "head" . }}{{ end -}}
 
         {{ $mainCss := resources.Get "css/main.scss" | resources.ToCSS | resources.Fingerprint }}
+        {{ partial "fonts" }}
         <link
             rel="stylesheet"
             type="text/css"
