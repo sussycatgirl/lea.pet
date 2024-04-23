@@ -3,5 +3,12 @@
         "env": {
             "HUGO_VERSION": "0.101.0"
         }
-    }
+    },
+    "redirects": [
+        {
+            "source": "/wp-(admin|login)(\\.php)?",
+            "destination": "https://hil-speed.hetzner.com/10GB.bin",
+            "permanent": false
+        }
+    ]
 }
