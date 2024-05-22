@@ -70,4 +70,12 @@ friends:
         url: "https://sneexy.pages.gay"
       - label: Fedi
         url: "https://lea.pet/@sneexy"
+  - name: Yaseen
+    handle: "@yassie_j"
+    description: "Fellow Lethal Company enjoyer!"
+    avatar: "https://lea.pet/proxy/avatar.webp?url=https%3A%2F%2Fmedia.labyrinth.zone%2Fmedia%2Fddb2e7cab2914afa41d85e179e042a71baa2cabc3d35aa1bbf606ac47b3ffc18.jpg&avatar=1"
+    quote: "Lea would never lead me astray, except when I got eaten by a giant golem"
+    links:
+      - label: Fedi
+        url: "https://labyrinth.zone/users/yassie_j"
 # todo
