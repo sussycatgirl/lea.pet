@@ -13,19 +13,61 @@ friends:
   - name: Amy
     handle: "@amycatgirl"
     description: "Developer, artist, and full-time catgirl"
-    avatar: "https://lea.pet/proxy/avatar.webp?url=https%3A%2F%2Fmedia.wetdry.world%2Faccounts%2Favatars%2F111%2F572%2F712%2F688%2F825%2F267%2Foriginal%2F4031800aa0962665.png&avatar=1"
+    avatar: "https://media.wetdry.world/accounts/avatars/111/572/712/688/825/267/original/6852099519cd8daa.png"
     quote: "cute"
     links:
       - label: Blog
         url: "https://amycatgirl.nekoweb.org/"
       - label: Fedi
         url: "https://wetdry.world/@amycatgirl"
-# still waiting for a quote
-#  - name: Beckett
-#    handle: "@chaotic_idiot"
-#    description: "Actual menace, and I mean it"
-#    avatar: "https://lea.pet/files/7512ee5e-df56-47d4-a8f6-0b09bf5e6039"
-#    quote: ""
-#    links:
-#      - label: Fedi
-#        url: "https://lea.pet/@chaotic_idiot"
+  - name: Beckett
+    handle: "@chaotic_idiot"
+    description: "Actual menace, and I mean it"
+    avatar: "https://lea.pet/files/7512ee5e-df56-47d4-a8f6-0b09bf5e6039"
+    quote: "scroll through the quotes channels and take your pick, I'm lazy"
+    links:
+      - label: Fedi
+        url: "https://lea.pet/@chaotic_idiot"
+  - name: Tess
+    handle: "@tesstherefusinggirl"
+    description: "Doesn't know anything about bread or toast"
+    avatar: "https://api.s3.lea.pet/lea.pet///e9f77cbd-525f-4d84-b22f-785786c5cbb3.png" 
+    quote: "lea lost the bread war but i still see her as a friend"
+    links:
+      - label: Fedi
+        url: "https://lea.pet/@tesstherefusinggirl"
+  - name: Tulpen
+    handle: "@tulpenkiste"
+    description: "Dragon girl who somehow gives off cat vibes"
+    avatar: "https://api.s3.lea.pet/lea.pet///03bb37fb-622f-450b-905e-f40237fc768c.webp"
+    quote: "damn, this car eepy"
+    links:
+      - label: Website
+        url: "https://tulpenkiste.codeberg.page"
+      - label: Fedi
+        url: "https://lea.pet/@tulpenkiste"
+  - name: bread
+    description: "Almost as unhinged as me :3"
+    avatar: "https://autumn.revolt.chat/avatars/wxvZGZr2e_rbbSnZEZHEhaRpXazuSvBiLQrBUQfcHA/zwonk.png"
+    quote: "waf waf waf! :3"
+  - name: Fuzuki
+    handle: "@fuzuki"
+    description: "Meow meow!"
+    avatar: "https://seccdn.libravatar.org/avatar/1840b2d2e386f1dd8b06296f51a410a7?s=128"
+    quote: "mrrow :neocat_pat_floof:"
+    links:
+      - label: Website
+        url: "https://fuzuki.dev"
+      - label: Fedi
+        url: "https://transfem.social/@fuzuki"
+  - name: Ruben
+    handle: "@sneexy"
+    description: "Silly dragon goofball"
+    avatar: "https://api.s3.lea.pet/lea.pet///ee2f0e5f-7eb2-4b74-81e9-f33bb66a6b40.webp"
+    quote: "mnfngmmfn vore,,"
+    links:
+      - label: Website
+        url: "https://sneexy.pages.gay"
+      - label: Fedi
+        url: "https://lea.pet/@sneexy"
+# todo
