@@ -1,7 +1,7 @@
 friends:
   - name: Lexi
     handle: "@queenoworld"
-    description: My girlfriend <3
+    description: "My girlfriend <3"
     avatar: "https://lea.pet/files/c480302d-baab-4dbe-961d-7f5cd86e1e42"
     quote: "I love you"
     links:
@@ -10,4 +10,22 @@ friends:
       - label: Fedi
         url: https://lea.pet/@lexi
     priority: true
-
+  - name: Amy
+    handle: "@amycatgirl"
+    description: "Developer, artist, and full-time catgirl"
+    avatar: "https://lea.pet/proxy/avatar.webp?url=https%3A%2F%2Fmedia.wetdry.world%2Faccounts%2Favatars%2F111%2F572%2F712%2F688%2F825%2F267%2Foriginal%2F4031800aa0962665.png&avatar=1"
+    quote: "cute"
+    links:
+      - label: Blog
+        url: "https://amycatgirl.nekoweb.org/"
+      - label: Fedi
+        url: "https://wetdry.world/@amycatgirl"
+# still waiting for a quote
+#  - name: Beckett
+#    handle: "@chaotic_idiot"
+#    description: "Actual menace, and I mean it"
+#    avatar: "https://lea.pet/files/7512ee5e-df56-47d4-a8f6-0b09bf5e6039"
+#    quote: ""
+#    links:
+#      - label: Fedi
+#        url: "https://lea.pet/@chaotic_idiot"
