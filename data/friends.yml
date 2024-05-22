@@ -1,0 +1,13 @@
+friends:
+  - name: Lexi
+    handle: "@queenoworld"
+    description: My girlfriend <3
+    avatar: "https://lea.pet/files/c480302d-baab-4dbe-961d-7f5cd86e1e42"
+    quote: "I love you"
+    links:
+      - label: Website
+        url: https://softkittypa.ws
+      - label: Fedi
+        url: https://lea.pet/@lexi
+    priority: true
+
