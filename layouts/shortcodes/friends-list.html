@@ -15,7 +15,7 @@
 
             display: flex;
             flex-direction: row;
-            gap: 16px;
+            gap: 48px;
             justify-content: left;
             align-items: center;
         }
@@ -23,6 +23,11 @@
         .friends-card:hover {
             margin: 28px 0;
             transform: scale(1.01);
+        }
+
+        .friends-pfp-text-container {
+            display: flex;
+            gap: 16px;
         }
     
         .friends-pfp {
@@ -73,8 +78,6 @@
     
             display: inline-grid;
             grid-template-columns: 1fr auto auto;
-    
-    
         }
     
         .quote-icon {
@@ -92,6 +95,23 @@
         .quote-icon-right {
             align-self: self-end;
         }
+
+        @media (max-width: 550px) {
+            .friends-card {
+                flex-direction: column;
+                justify-content: start;
+                gap: 16px;
+            }
+
+            .friends-pfp-text-container {
+                align-self: start;
+            }
+
+            .friends-quote {
+                margin: 0;
+                margin-bottom: -4px;
+            }
+        }
     </style>
 
     {{ $friendListUnsorted := $.Site.Data.friends.friends }}
@@ -103,30 +123,32 @@
     {{ end }}
     {{ range $index, $data := $friendList }}
         <div class="friends-card">
-            <img class="friends-pfp" src="{{ $data.avatar }}" />
+            <div class="friends-pfp-text-container">
+                <img class="friends-pfp" src="{{ $data.avatar }}" />
 
-            <div class="friends-text">
-                <div class="friends-name-outer">
-                    <p class="friends-name">
-                        {{ $data.name }}
-                    </p>
-                    {{ if isset $data "handle" }}
-                        <p class="friends-handle">
-                            {{ $data.handle }}
+                <div class="friends-text">
+                    <div class="friends-name-outer">
+                        <p class="friends-name">
+                            {{ $data.name }}
                         </p>
-                    {{ end }}
-                </div>
-                <p class="friends-description">{{ $data.description }}</p>
-                <p class="friends-link-list">
-                    {{ range $index, $linkData := $data.links }}
-                        {{ if not (eq $index 0) }}
-                            &bull;
+                        {{ if isset $data "handle" }}
+                            <p class="friends-handle">
+                                {{ $data.handle }}
+                            </p>
                         {{ end }}
-                        <a class="friends-link" href="{{ $linkData.url }}" target="_blank">
-                            {{ $linkData.label }}
-                        </a>
-                    {{ end }}
-                </p>
+                    </div>
+                    <p class="friends-description">{{ $data.description }}</p>
+                    <p class="friends-link-list">
+                        {{ range $index, $linkData := $data.links }}
+                            {{ if not (eq $index 0) }}
+                                &bull;
+                            {{ end }}
+                            <a class="friends-link" href="{{ $linkData.url }}" target="_blank">
+                                {{ $linkData.label }}
+                            </a>
+                        {{ end }}
+                    </p>
+                </div>
             </div>
 
             <div class="friends-quote">
