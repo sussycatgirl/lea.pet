@@ -19,6 +19,7 @@ $home-card-blur: 8px;
     --color-mark: #8260e0;
     --logo-color-left: #8884ff;
     --strongest-color: #ffffff;
+    --text-font: #{$text-font};
 }
 
 @media (prefers-color-scheme: light) {
