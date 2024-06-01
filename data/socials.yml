@@ -15,12 +15,16 @@ items:
     url: https://lea.pet/@lea
     label: "@lea@lea.pet"
     color: "#76adf4"
-  - name: email
-    url: mailto:meow@lea.pet
-    label: "meow@lea.pet"
-    color: "#ee86e3"
     obscured: true
   - name: pronouns-page
     url: https://en.pronouns.page/@sussycatgirl
     label: "@sussycatgirl"
     color: "#ff95bb"
+  - name: email
+    url: mailto:meow@lea.pet
+    label: "meow@lea.pet"
+    color: "#ee86e3"
+  - name: retrospring
+    url: https://retrospring.net/@sussycatgirl
+    label: "@sussycatgirl"
+    color: "#5e35b1"
