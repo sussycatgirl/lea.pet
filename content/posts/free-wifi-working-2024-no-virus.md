@@ -1,8 +1,8 @@
 ---
 title: "How to pirate airplane Wifi"
 date: 2024-07-18T12:53:07+02:00
-draft: true
-hidden: true
+draft: false
+hidden: false
 author: Lea
 author_url: https://lea.pet/@lea
 ---
@@ -25,7 +25,7 @@ Almost any public Wi-Fi network utilizes [Captive Portals](https://en.wikipedia.
 You've almost certainly seen these before if you ever connected to a public access point. \
 Most of the time, they're used to make sure users agree to the network's Terms of Service or Privacy Policy.
 
-[ TODO insert example screenshot of captive portal ]
+{{< image "free-wifi-working-2024-no-virus/edeka-captive-portal.png" >}}
 
 While mildly annoying for users, this is a perfectly valid use case. Issues arise when Captive Portals are used to authenticate users. To understand why, let me give you a quick run-down on how these Captive Portals actually function.
 
