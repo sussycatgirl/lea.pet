@@ -10,6 +10,7 @@ $text-font: "Lekton", monospace;
 $content-width: 50em;
 $home-card-opacity: 0.8;
 $home-card-blur: 8px;
+$bg-image: var(--bg-image);
 
 :root {
     --primary-background: 21, 13, 31;
@@ -20,16 +21,18 @@ $home-card-blur: 8px;
     --logo-color-left: #8884ff;
     --strongest-color: #ffffff;
     --text-font: #{$text-font};
+    --bg-image: url("/content-bg.jpg");
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --primary-background: 236, 178, 236;
-        --secondary-background: 225, 152, 225;
-        --primary-foreground: 70, 46, 75;
+        --primary-background: 253, 203, 255;
+        --secondary-background: 230, 181, 230;
+        --primary-foreground: 106, 78, 113;
         --color-link: #7447BD;
         --color-mark: #8260e0;
         --logo-color-left: #4e4c94;
         --strongest-color: #000000;
+        --bg-image: url("/content-bg-light.jpg");
     }
 }

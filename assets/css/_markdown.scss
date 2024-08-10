@@ -66,13 +66,18 @@ code:not(.no-codeblock) {
 }
 
 .codeblock-outer code {
-    background-color: $nord0;
-    padding: 8px 12px;
+    background-color: unquote("rgba(var(--secondary-background), 0.15)");
+    padding: 16px 20px;
     border-radius: 5px;
     width: 100%;
-    overflow-x: scroll;
+    white-space: pre-wrap;
     display: inline-block;
     font-family: 'Source Code Pro', monospace;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .codeblock-outer pre { margin: 0 }
