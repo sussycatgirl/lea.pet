@@ -24,7 +24,3 @@ items:
     url: mailto:meow@lea.pet
     label: "meow@lea.pet"
     color: "#ee86e3"
-  - name: retrospring
-    url: https://retrospring.net/@sussycatgirl
-    label: "@sussycatgirl"
-    color: "#5e35b1"
