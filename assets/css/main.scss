@@ -16,6 +16,20 @@ body {
     overflow-x: hidden;
 }
 
+.bg-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -50;
+    filter: blur(12px);
+    opacity: 0.1;
+    width: 100%;
+    min-height: 100%;
+    content: $bg-image;
+}
+
 main {
     max-width: $content-width;
     width: 100%;
@@ -90,14 +104,18 @@ hr {
 
 blockquote {
     border-inline-start: 4px solid $primary-foreground;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba($secondary-background-rgb, 0.7);
     border-radius: 6px;
     margin-left: 0px;
     margin-right: 0px;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 blockquote > * {
-    padding: 2px 12px 2px 8px;
+    padding: 8px 16px 8px 12px;
 }
 
 table {
