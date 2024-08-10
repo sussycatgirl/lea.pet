@@ -13,7 +13,7 @@
     ],
     "headers": [
         {
-            "source": "/content-bg(.*)\\.jpg",
+            "source": "/content-bg(|-light)\\.jpg",
             "headers": [
                 {
                     "key": "Cache-Control",
