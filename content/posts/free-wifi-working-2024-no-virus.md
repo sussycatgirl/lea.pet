@@ -62,7 +62,7 @@ All right, enough talking, time to have some fun!
 
 You will need:
 
-- **A laptop.** Sorry, the tools you'll need aren't made for phones. No, you can't hack Wi-Fi network on your fancy iPhone 15. You'll also need to run a sensible operating system on the laptop - Windows isn't useful for anything other than basic web browsing, and especially not for professional pentesting tools. And no, don't even think about using WSL.
+- **A laptop.** Sorry, the tools you'll need aren't made for phones. No, you can't hack a Wi-Fi network on your fancy iPhone 15. You'll also need to run a sensible operating system on the laptop - Windows isn't useful for anything other than basic web browsing, and especially not for professional pentesting tools. And no, don't even think about using WSL.
 - **A compatible network adapter.** Unfortunately, not every Wi-Fi card supports the special mode we'll be using to listen to Wi-Fi frames. If your laptop is somewhat recent, the built in Wi-Fi card is likely sufficient, but if not then you'd have to get an external USB Wi-Fi adapter. You'll find out whether your card is supported once we get to [Enabling monitor mode](#enabling-monitor-mode).
 - **A target network.** Again - Doing this without explicit permission from the network operator is **illegal**. And yes, regarding the post's title, even though we won't actually be transmitting anything abnormal, it's probably even more illegal to mess around with your network adapter on an airplane, and you really don't want to get caught doing that. Good luck explaining to the flight attendants what the fancy terminal on your laptop means. I don't know who'd be crazy enough to do this on a plane. {{< neocat >}}
 
