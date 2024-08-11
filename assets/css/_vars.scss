@@ -11,6 +11,7 @@ $content-width: 50em;
 $home-card-opacity: 0.8;
 $home-card-blur: 8px;
 $bg-image: var(--bg-image);
+$bg-opacity: var(--bg-opacity);
 
 :root {
     --primary-background: 21, 13, 31;
@@ -22,6 +23,7 @@ $bg-image: var(--bg-image);
     --strongest-color: #ffffff;
     --text-font: #{$text-font};
     --bg-image: url("/content-bg.jpg");
+    --bg-opacity: 0.1;
 }
 
 @media (prefers-color-scheme: light) {
@@ -34,5 +36,6 @@ $bg-image: var(--bg-image);
         --logo-color-left: #4e4c94;
         --strongest-color: #000000;
         --bg-image: url("/content-bg-light.jpg");
+        --bg-opacity: 0.3;
     }
 }
