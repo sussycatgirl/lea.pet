@@ -140,21 +140,23 @@ Note the `--band X` flag. The three valid options here are `a`, `b` and `g` - Yo
 
 Also make sure to run this in a fairly big terminal so you can read the command output properly. You can also try using the `-w <filename>` and `--output-format csv` options to write the output to a file instead of pretty-printing it to your terminal.
 
-You will see two sections - You can mostly disregard the top section, it simply prints a list of discovered access points. The bottom section shows a list of discovered clients. Here, the `BSSID` column is the device's MAC address - We'll need these. the `STATION` column is the MAC address of the access point it's connected to, but it's irrelevant for us.
+You will see two sections - You can mostly disregard the top section, it simply prints a list of discovered access points. The bottom section shows a list of discovered clients. Here, the `STATION` column is the device's MAC address - We'll need these. the `BSSID` column is the MAC address of the access point it's connected to, but it's irrelevant for us.
+
+*I previously mixed up `STATION` and `BSSID` here, sorry about that <3*
 
 > By the way, if you need to avoid looking suspicious, I recommend running everything in a Visual Studio Code terminal with some project open so that you can quickly close it and have plausible deniability that you're simply programming.
 >
 > {{< image "free-wifi-working-2024-no-virus/funny.jpg" >}}
 
-All right, got a list of devices and their BSSIDs? Stop the airodump-ng command, take note of the BSSIDs and disable monitor mode. Now it's time to find some victim that paid (or in our example, logged in with their T-Mobile account).
+All right, got a list of devices and their MAC addresses? Stop the airodump-ng command, take note of the MACs and disable monitor mode. Now it's time to find some victim that paid (or in our example, logged in with their T-Mobile account).
 
 ### Using the collected MAC addresses
 
-Now that we have a list of BSSIDs, the next step is to spoof our own MAC address. With monitor mode disabled and your network manager re-enabled, head over to your network settings.
+Now that we have a list of MAC addresses, the next step is to spoof our own MAC address. With monitor mode disabled and your network manager re-enabled, head over to your network settings.
 
 You're most likely running NetworkManager, and if you aren't you definitely know what you're doing. The settings screen should look mostly the same across different desktop environments, and you're looking for a "MAC address" or "Cloned MAC address" field. On GNOME I recommend using `nmtui` over the network settings GUI because the latter is fairly unstable in my experience.
 
-Pick a BSSID from the list you gathered earlier and paste it in the MAC address field, then save and disconnect and reconnect the network. Now you want to check whether the device you've cloned paid for internet access (or in this example, is a T-Mobile user), and if not just discard the MAC address and repeat with a different one until you find a suitable target. \
+Pick a MAC address from the list you gathered earlier and paste it in the MAC address field, then save and disconnect and reconnect the network. Now you want to check whether the device you've cloned paid for internet access (or in this example, is a T-Mobile user), and if not just discard the MAC address and repeat with a different one until you find a suitable target. \
 On our example network we can check this by going to `https://unitedwifi.com`, as mentioned above.
 
 Once you found a suitable victim, you should be connected as them and have access to the internet - Until suddenly you don't. Turns out, access points really don't like it when two identical devices are connected to the network!
